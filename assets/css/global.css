@@ -1,0 +1,125 @@
+/*====global css start=====*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+@font-face {
+    font-family: 'FoundersGrotesk';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/FoundersGrotesk-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'FoundersGrotesk-Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/FoundersGrotesk-Medium.otf') format('opentype');
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+p {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+ul{
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+}
+a{
+    transition: 0.6s ease-out;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.mrtop70{
+    margin-top: 70px;
+}
+.mrbottom70{
+    margin-bottom: 70px;
+}
+.mrtop50{
+    margin-top: 50px;
+}
+.mrbottom50{
+    margin-bottom: 50px;
+}
+.mrtop30{
+    margin-top: 30px;
+}
+.pdtop70{
+    padding-top: 70px;
+}
+.pdbottom70{
+    padding-bottom: 70px;
+}
+.pdtop50{
+    padding-top: 50px;
+}
+.pdbottom50{
+    padding-bottom: 50px;
+}
+.p0{
+    padding: 0;
+}
+.mr0{
+    margin: 0;
+}
+.topmain-heading h2 {
+    text-transform: uppercase;
+    font-size: 48px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #0a1229;
+}
+.main-heading h2 {
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #0a1229;
+    /*color: #279e64;*/
+}
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+      background: #279e64;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    padding: 8px 30px;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #13287D;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+/*====global css end=====*/

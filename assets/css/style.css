@@ -1,0 +1,559 @@
+/*====header css start======*/
+/* MENU STYLES */
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: #552b01;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration:0.75s;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition:  opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: rgb(72 59 51 / 80%);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 40px;
+
+}
+.logo.logofooter{
+    padding: 0;
+}
+.logo.logofooter img{
+    max-width: 200px;
+}
+.logofooter{
+    position: fixed;
+   top: 10px;
+    right: 10px;
+    z-index: 9;
+}
+
+/*====header css end======*/
+/*====banner css start======*/
+.home-slider .item {
+    background-size: cover !important;
+    background-position: center !important;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.home-slider .item::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    content: "";
+    background: rgb(85 43 1 / 40%);
+    height: 100%;
+}
+.banner-box{
+    position: relative;
+    z-index: 9;
+}
+.banner-box h4 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 55px;
+    /* white-space: nowrap;
+    overflow: hidden;*/
+/*    transform: translateY(-50%);   */
+    /* margin: 0; */
+}
+.banner-box p{
+    color: #fff;
+    margin: 10px 0px 0px 0px;
+    line-height: 22px;
+}
+.home-slider .owl-nav {
+    display: none;
+}
+.home-slider .owl-dots {
+    position: absolute;
+    /* left: 0; */
+    right: 10px;
+    bottom: 10px;
+}
+.home-slider .owl-dot button{
+    display: block;
+}
+.home-slider .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #fff;
+}
+/* Animation */
+/*anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 100%;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}*/
+/*====banner css end======*/
+/*====minibanner css start======*/
+.minibanner{
+        background-size: cover !important;
+    background-position: center !important;
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.minibanner::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    content: "";
+    background: rgb(72 59 52 / 60%);
+    height: 100%;
+}
+.minibanner .breadcrumb{
+    background: unset;
+    position: relative;
+    z-index: 9;
+}
+.minibanner .breadcrumb a{
+    color: #fff;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.minibanner .breadcrumb-item.active {
+    color: #279e64;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.minibanner .breadcrumb-item::before {
+    color: #fff;
+}
+/*====minibanner css end======*/
+/*====about form css start======*/
+.about-main-box {
+    
+}
+.about-block img {
+    width: 100%;
+    border-radius: 10px;
+}
+/*====about form css end======*/
+/*====contact form css start======*/
+.info-section {
+    background: #f1f1f1;
+    padding: 70px 0px 50px 0px;
+}
+.contact-formbox input, .contact-formbox textarea {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+    height: 55px;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.contact-formbox textarea{
+    height: 120px;
+}
+.infobox{
+    box-shadow: 0px 0px 30px 0px rgba(0,33,85,0.1);
+    margin-bottom: 30px;
+}
+.infobox-img img{
+    width: 100%;
+}
+.infobox-content {
+    padding: 30px;
+}
+.infobox-content h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.infobox-content p {
+    padding-left: 32px;
+    position: relative;
+}
+.infobox-content i {
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+/*====contact form css end======*/
+/*====about css start======*/
+.about-block img {
+    width: 100%;
+    border: 10px solid #f0f0f0;
+}
+/*==========team section======*/
+.team-section {
+    background-position: center !important;
+    width: 100%;
+    background-repeat: repeat !important;
+    position: relative;
+    text-align: center;
+    padding: 55px 0 32px 0;
+}
+
+.team-member {
+  margin: 0px 0px 15px 0px;
+  padding: 0;
+}
+
+.team-member figure {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.team-member figure img {
+  min-width: 100%;
+}
+
+.team-member figcaption p {
+  font-size: 16px;
+}
+
+.team-member figcaption ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.team-member figcaption ul {
+  visibility: visible;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.team-member figcaption ul li {
+  display: inline-block;
+  padding: 10px;
+}
+.team-member figcaption ul li a{
+    color: #fff;
+    transition: 0.6s ease-out;
+}
+.team-member h4 {
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.team-member figcaption {
+  padding: 50px;
+  color: transparent;
+  background-color: transparent;
+  position: absolute;
+  z-index: 996;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.team-member figure:hover figcaption {
+  visibility: visible;
+  color: #fff;
+  background: rgb(72 59 52 / 89%);
+  /* Primary color, can be changed via colors.css */
+  
+  height: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.team-title {
+    background: #fff;
+    margin: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 10px 10px;
+}
+.team-member figure:hover{
+  color: rgba(49, 49, 49, .97);
+}
+.team-member figcaption ul li a:hover{
+  transform: rotate(360deg);
+}
+
+.team-member figure img {
+  -webkit-transform: scale(1) rotate(0) translateY(0);
+  -moz-transform: scale(1) rotate(0) translateY(0);
+  -o-transform: scale(1) rotate(0) translateY(0);
+  -ms-transform: scale(1) rotate(0) translateY(0);
+  transform: scale(1) rotate(0) translateY(0);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.team-member figure:hover img {
+  -webkit-transform: scale(1.1) rotate(1deg) translateY(12px);
+  -moz-transform: scale(1.1) rotate(1deg) translateY(12px);
+  -o-transform: scale(1.1) rotate(1deg) translateY(12px);
+  -ms-transform: scale(1.1) rotate(1deg) translateY(12px);
+  transform: scale(1.1) rotate(1deg) translateY(12px);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/*==========team section======*/
+/*====about css end======*/
+/*====footer css start======*/
+.main-footer {
+    background: #f7f7f7;
+    /*position: fixed;*/
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    padding: 10px 0px 10px 0px;
+}
+.footer-page ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.footer-page ul li a{
+    color: #552b01;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 5px 10px;
+}
+.footersocial ul li a {
+    transition: 0.6s ease-out;
+    color: #552b01;
+}
+.footersocial ul li a:hover {
+    color: #279e64;
+    transform: rotateZ(360deg);
+}
+.footer-page ul li a:hover{
+    color: #279e64;
+}
+.logo {
+    text-align: center;
+    padding: 10px 0px 20px 0px;
+}
+.logo img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0px auto;
+    text-align: center;
+    border-radius: 10px;
+}
+/*====footer css end======*/
+/*========privacy page css start======*/
+.privacy-box h5 {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 12px 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background: #f6f6f6;
+    color: #55290b;
+}
+.privacy-box h6 {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.privacy-box p {
+    font-size: 16px;
+    line-height: 24px;
+}
+/*========privacy page css start======*/
+/*========service page css start======*/
+.service-box {
+    transition: all 0.5s;
+    text-align: center;
+    padding: 70px;
+}
+.bg-ser{
+   background-color: #F6F9FF; 
+}
+.service-box img {
+    width: 100%;
+}
+.service-box h2 {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-size: 30px;
+    margin: 10px 0px;
+}
+.service-box p {
+    text-align: center;
+}
+.service-box a {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: center;
+    display: block;
+    color: #55290b;
+}
+.service-box i{
+    font-size: 22px;
+}
+.service-box:hover .sicon {
+    transform: scale(-1) rotate(180deg);
+}
+/*========service page css end======*/
